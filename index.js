@@ -5,8 +5,12 @@ const ulEl = document.getElementById('ul-el');
 
 
 inputBtn.addEventListener("click", function() {
-    myLead.push(inputEl.value)
-    renderLeads();
+    if (inputEl.value === "") {
+        alert("Do not enter empty!")
+    } else {
+        myLead.push(inputEl.value)
+        renderLeads();
+    }
     inputEl.value=null;
 });
 

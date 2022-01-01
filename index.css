@@ -20,11 +20,23 @@ button {
   color: white;
 }
 
-a {
-  text-decoration: none;
-  color: #000000;
+/* A tag */
+a:link {
+  color: #5f9341;
 }
 
-a:hover {
-  font-weight: bold;
+a:visited {
+  color: #5f9341;
+}
+
+/* SYTLE THE LIST ACCORDING TO THE DESIGN */
+ul {
+  padding-left: 0px;
+  margin-top: 20px;
+  list-style: none;
+}
+
+li {
+  color: #5f9341;
+  padding-bottom: 4px;
 }
