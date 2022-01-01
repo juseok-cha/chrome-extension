@@ -19,3 +19,12 @@ button {
   background-color: #5f9341;
   color: white;
 }
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  font-weight: bold;
+}
