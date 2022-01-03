@@ -12,15 +12,19 @@ input {
   padding: 10px 0px;
   box-sizing: border-box;
 }
-
+/* Button */
 button {
   margin-top: 5px;
   padding: 10px 20px;
-  border: none;
+  border: 1px solid #5f9341;
   background-color: #5f9341;
   color: white;
 }
 
+#delete-btn {
+  background-color: white;
+  color: #5f9341;
+}
 /* A tag */
 a:link {
   color: #5f9341;
