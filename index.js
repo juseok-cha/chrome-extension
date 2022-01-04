@@ -5,15 +5,15 @@ const inputEl = document.getElementById('input-el');
 const ulEl = document.getElementById('ul-el');
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLead"));
 
+// What these codeds mean?
 if (leadsFromLocalStorage) {
     myLead = leadsFromLocalStorage
-    console.log(leadsFromLocalStorage)
     render(myLead);
 }
 
 function render(leads) {
     let listItems = ""
-    for (var i = 0; i < leads.length; i++) {
+    for (let i = 0; i < leads.length; i++) {
         if (leads[i] != "") {
             listItems += 
                     `<li>
@@ -21,23 +21,28 @@ function render(leads) {
                             ${leads[i]}
                         </a>
                     </li>`
-        }
+        } 
         // ulEl.innerHTML +=  "<li>" + myLead[i] + "</li>"
     };
     
     ulEl.innerHTML = listItems
-}
-
-inputBtn.addEventListener("click", function() {
-    myLead.push(inputEl.value);
-    inputEl.value = "";
-    localStorage.setItem("myLead", JSON.stringify(myLead))
-    console.log("add");
-});
+};
 
 deleteBtn.addEventListener("dblclick",function() {
     localStorage.clear();
     myLead = [];
     render(myLead);
     console.log("deleted")
-} )
+})
+
+inputBtn.addEventListener("click", function() {
+    // Prevent an empty element
+    if (inputEl.value === "") {
+        alert("It's empty!")
+        return
+    }
+    myLead.push(inputEl.value);
+    inputEl.value = "";
+    localStorage.setItem("myLead", JSON.stringify(myLead))
+    render(myLead)
+})
